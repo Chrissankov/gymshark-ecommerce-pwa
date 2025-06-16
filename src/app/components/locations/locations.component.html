@@ -1,0 +1,25 @@
+<div id="locations" class="locations">
+  <h2>{{ "locations.title" | translate }}</h2>
+
+  <div class="map-container">
+    <iframe
+      [src]="stores[currentStoreIndex].mapUrl | safe"
+      width="100%"
+      height="300"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+
+  <div class="store-buttons">
+    <button
+      *ngFor="let store of stores; index as i"
+      [class.active]="i === currentStoreIndex"
+      (click)="changeStore(i)"
+    >
+      {{ store.name | translate }}
+    </button>
+  </div>
+</div>

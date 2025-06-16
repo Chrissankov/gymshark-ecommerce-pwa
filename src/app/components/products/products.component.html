@@ -1,0 +1,29 @@
+<div id="products" class="products-container">
+  <div class="header">
+    <h2>{{ "products.title" | translate }} &nbsp;</h2>
+    <button *ngIf="isLoggedIn" (click)="openModal()">+</button>
+  </div>
+
+  <p *ngIf="products.length === 0">{{ "products.noAvailable" | translate }}</p>
+
+  <div class="product-list">
+    <div class="product-card" *ngFor="let product of products">
+      <img
+        *ngIf="product.image"
+        [src]="product.image"
+        alt="{{ product.name }} Image"
+      />
+
+      <div class="details">
+        <h3>{{ product.name }}</h3>
+        <small>{{ product.description }}</small>
+        <small> /&nbsp;{{ product.color }}</small>
+        <p>{{ product.price }}$</p>
+      </div>
+      <div class="actions" *ngIf="isLoggedIn">
+        <button (click)="openModal(product)">✏️</button>
+        <button (click)="deleteProduct(product.id)">🗑️</button>
+      </div>
+    </div>
+  </div>
+</div>

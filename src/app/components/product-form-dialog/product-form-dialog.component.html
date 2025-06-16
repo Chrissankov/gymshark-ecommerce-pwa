@@ -1,0 +1,84 @@
+<div class="dialog-container" [attr.dir]="rtlDirection ? 'rtl' : 'ltr'">
+  <h2 mat-dialog-title class="title">
+    {{
+      data
+        ? ("crud_operations.edit_product" | translate)
+        : ("crud_operations.add_product" | translate)
+    }}
+  </h2>
+
+  <mat-dialog-content [formGroup]="productForm">
+    <mat-form-field appearance="fill">
+      <mat-label>{{ "crud_operations.product_name" | translate }}</mat-label>
+      <input matInput formControlName="name" />
+      <mat-error *ngIf="productForm.get('name')?.hasError('required')">
+        {{ "crud_operations.required" | translate }}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>{{ "crud_operations.description" | translate }}</mat-label>
+      <input matInput formControlName="description" />
+      <mat-error *ngIf="productForm.get('description')?.hasError('required')">
+        {{ "crud_operations.required" | translate }}
+      </mat-error>
+    </mat-form-field>
+
+    <div class="color-picker-wrapper">
+      <mat-form-field appearance="fill">
+        <mat-label>{{ "crud_operations.color" | translate }}</mat-label>
+        <input
+          matInput
+          formControlName="color"
+          [colorPicker]="productForm.get('color')?.value"
+          [style.background]="productForm.get('color')?.value"
+          (colorPickerChange)="productForm.get('color')?.setValue($event)"
+        />
+        <mat-error *ngIf="productForm.get('color')?.hasError('required')">
+          {{ "crud_operations.required" | translate }}
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="fill">
+      <mat-label>{{ "crud_operations.price" | translate }}</mat-label>
+      <input type="number" matInput formControlName="price" />
+      <mat-error *ngIf="productForm.get('price')?.hasError('required')">
+        {{ "crud_operations.price_required" | translate }}
+      </mat-error>
+      <mat-error *ngIf="productForm.get('price')?.hasError('min')">
+        {{ "crud_operations.price_min" | translate }}
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Image Upload with Preview -->
+    <div class="image-upload-container">
+      <label for="fileInput" class="custom-file-label">
+        <ng-container *ngIf="productForm.get('image')?.value; else placeholder">
+          <img [src]="productForm.get('image')?.value" alt="Preview" />
+        </ng-container>
+        <ng-template #placeholder>
+          <span>{{ "crud_operations.upload_image" | translate }}</span>
+        </ng-template>
+        <input
+          id="fileInput"
+          type="file"
+          accept="image/jpeg, image/png, image/jpg, image/webp"
+          (change)="onImageSelected($event)"
+        />
+      </label>
+      <mat-error *ngIf="productForm.get('image')?.hasError('required')">
+        {{ "crud_operations.required" | translate }}
+      </mat-error>
+    </div>
+  </mat-dialog-content>
+
+  <mat-dialog-actions class="buttons">
+    <button mat-button class="cancel" (click)="cancel()">
+      {{ "crud_operations.cancel" | translate }}
+    </button>
+    <button mat-raised-button color="primary" class="submit" (click)="save()">
+      {{ "crud_operations.save" | translate }}
+    </button>
+  </mat-dialog-actions>
+</div>

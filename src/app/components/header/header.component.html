@@ -1,0 +1,115 @@
+<header>
+  <div class="top-bar">
+    <div class="left">
+      <div (click)="onLogoClick()" class="logo-representation desktop-only">
+        <span class="brand-name">GymShark</span>
+        <img src="assets/images/gymsharkLogo.webp" alt="Logo" class="logo" />
+      </div>
+
+      <!-- Desktop language switcher -->
+      <div class="lang-switcher desktop-only">
+        <button (click)="changeLang('en')">{{ "langs.en" | translate }}</button>
+        <button (click)="changeLang('ar')">{{ "langs.ar" | translate }}</button>
+      </div>
+    </div>
+
+    <div class="right">
+      <!-- Text Size (desktop) -->
+      <div class="text-size desktop-only">
+        <button (click)="increaseFontSize()">
+          {{ "size.increment" | translate }}
+        </button>
+        <button (click)="decreaseFontSize()">
+          {{ "size.decrement" | translate }}
+        </button>
+      </div>
+
+      <!-- Login/Logout buttons -->
+      <button class="login-btn" *ngIf="!isLoggedIn" (click)="openLoginModal()">
+        {{ "buttons.login" | translate }}
+      </button>
+
+      <app-login-modal
+        *ngIf="isLoginModalOpen"
+        (closeModal)="closeLoginModal()"
+        (loginSuccess)="closeLoginModal()"
+      ></app-login-modal>
+
+      <button class="login-btn" *ngIf="isLoggedIn" (click)="logout()">
+        {{ "buttons.logout" | translate }}
+      </button>
+
+      <div (click)="onLogoClick()" class="logo-representation mobile-only">
+        <span class="brand-name">GymShark</span>
+        <img src="assets/images/gymsharkLogo.webp" alt="Logo" class="logo" />
+      </div>
+
+      <!-- Menu Icon (mobile only) -->
+      <button class="menu-icon mobile-only" (click)="toggleMobileMenu()">
+        ☰
+      </button>
+    </div>
+  </div>
+
+  <!-- Desktop menu -->
+  <nav class="menu desktop-menu">
+    <ul>
+      <li (click)="scrollToSection('slides')">{{ "nav.home" | translate }}</li>
+      <li (click)="scrollToSection('products')">
+        {{ "nav.products" | translate }}
+      </li>
+      <li (click)="scrollToSection('locations')">
+        {{ "nav.locations" | translate }}
+      </li>
+      <li (click)="scrollToSection('footer')">
+        {{ "nav.follow" | translate }}
+      </li>
+      <li (click)="onEcommerceClick()">
+        {{ "nav.ecommerce" | translate }}
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu-overlay" *ngIf="showMobileMenu">
+    <button class="close-btn" (click)="closeMobileMenu()">✕</button>
+
+    <img src="/assets/images/gymsharkLogo.webp" alt="Logo" class="logo-menu" />
+
+    <ul>
+      <li (click)="scrollToSection('slides')" (click)="closeMobileMenu()">
+        {{ "nav.home" | translate }}
+      </li>
+      <li (click)="scrollToSection('products')" (click)="closeMobileMenu()">
+        {{ "nav.products" | translate }}
+      </li>
+      <li (click)="scrollToSection('locations')" (click)="closeMobileMenu()">
+        {{ "nav.locations" | translate }}
+      </li>
+      <li (click)="scrollToSection('footer')" (click)="closeMobileMenu()">
+        {{ "nav.follow" | translate }}
+      </li>
+      <li (click)="closeMobileMenu(); onEcommerceClick()">
+        {{ "nav.ecommerce" | translate }}
+      </li>
+    </ul>
+
+    <div class="utilities">
+      <!-- Lang switcher for mobile -->
+      <div class="lang-switcher">
+        <button (click)="changeLang('en')">{{ "langs.en" | translate }}</button>
+        <button (click)="changeLang('ar')">{{ "langs.ar" | translate }}</button>
+      </div>
+
+      <!-- Font size for mobile -->
+      <div class="text-size">
+        <button (click)="increaseFontSize()">
+          {{ "size.increment" | translate }}
+        </button>
+        <button (click)="decreaseFontSize()">
+          {{ "size.decrement" | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

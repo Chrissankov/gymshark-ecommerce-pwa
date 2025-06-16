@@ -1,0 +1,28 @@
+<div id="slider" class="slider">
+  <div class="slider-content">
+    <div class="left">
+      <h1>{{ "slider.title" | translate }}</h1>
+      <p>
+        {{ "slider.description" | translate }}
+      </p>
+      <button>
+        <i class="fa-solid fa-cart-shopping"></i>
+      </button>
+    </div>
+
+    <div class="image-container">
+      <img
+        src="{{ slides[currentIndex] }}"
+        alt="Slide Image"
+        [class.fade]="fade"
+      />
+    </div>
+
+    <!-- RIGHT SIDE: Slide Button -->
+    <div class="right" [class.left]="rtlDirection">
+      <button (click)="nextSlide()">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+</div>

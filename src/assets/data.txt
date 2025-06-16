@@ -1,0 +1,67 @@
+
+      this.products = [
+        {
+          id: Date.now(),
+          name: 'Lifting Club Hoodie',
+          description: 'Oversized Fit',
+          color: 'Black',
+          price: 85,
+          image:
+            'https://cdn.shopify.com/s/files/1/0156/6146/files/GFXGymsharkLiftingClubHoodieGSBlack_GSPebbleGreyA1C8C-BB3L-0534_1664x.jpg?v=1728378671',
+        },
+        {
+          id: Date.now() + 1,
+          name: 'Camo Long Sleeve Top',
+          description: 'Body Fit',
+          color: 'Black-Grey',
+          price: 42,
+          image:
+            'https://cdn.shopify.com/s/files/1/1367/5207/files/ADAPTCAMOSEAMLESSLSCROPTOPENG-L-A0146GSBlackGSAsphaltGreyB9A5A-BCNC4_1664x.jpg?v=1715768203',
+        },
+        {
+          id: Date.now() + 2,
+          name: 'Corset Seamless Sports Bra',
+          description: 'Light Support',
+          color: 'Lift Blue',
+          price: 42,
+          image:
+            'https://cdn.shopify.com/s/files/1/1367/5207/files/LINEARSEAMLESSBRAGSLiftBlueB9A7P-UCVF4060_1664x.jpg?v=1728655024',
+        },
+        {
+          id: Date.now() + 3,
+          name: 'Scallop Hem Shaped Shorts',
+          description: 'Regular Fit',
+          color: 'Vintage Pink',
+          price: 17,
+          image:
+            'https://cdn.shopify.com/s/files/1/1367/5207/files/ScallopHemLooseShortGSVintagePinkB8A9X-KB0V_1ee728eb-28d3-48b5-9a89-197bed0fc84e_1664x.jpg?v=1738061106',
+        },
+        {
+          id: Date.now() + 4,
+          name: 'Power Wordmark Joggers',
+          description: 'Oversized Fit',
+          color: 'Black',
+          price: 48,
+          image:
+            'https://cdn.shopify.com/s/files/1/0156/6146/files/A_PowerOriginalsJoggerGSBlackA2C9C-BB2J-1755_2b94df95-9444-47df-a0ad-c2f6721938b8_1664x.jpg?v=1740587340',
+        },
+        {
+          id: Date.now() + 5,
+          name: 'Running Skort',
+          description: 'Regular Fit',
+          color: 'Strong Teal',
+          price: 39,
+          image:
+            'https://cdn.shopify.com/s/files/1/0156/6146/files/RUNNINGSKORTGSStrongTealB1B1N-TBQQ-1141_6be2a5cd-c1b6-49a8-b8e1-4341ad13c3cd_1664x.jpg?v=1735645411',
+        },
+	{
+          id: Date.now() + 6,
+          name: 'Heritage Washed Short',
+          description: 'Oversized Fit',
+          color: 'Titanium Blue',
+          price: 27,
+          image:
+            "https://cdn.shopify.com/s/files/1/0156/6146/files/PowerWashed5ShortsGSTitaniumBlue-ACIDWASHSMALLBALLA4A8K-UCMS-1488_1664x.jpg?v=1706622766",
+        },
+      ];
+      

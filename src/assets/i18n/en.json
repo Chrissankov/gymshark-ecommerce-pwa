@@ -1,0 +1,77 @@
+{
+  "langs": {
+    "en": "En",
+    "ar": "Ar"
+  },
+  "size": {
+    "increment": "A+",
+    "decrement": "A-"
+  },
+  "buttons": {
+    "login": "Login",
+    "logout": "Logout"
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "locations": "Locations",
+    "follow": "Follow Us",
+    "ecommerce": "Ecommerce"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "slider": {
+    "title": "BESTSELLERS",
+    "description": "Our collections are built for teams, athletes, lovers, and friends. Style meets performance—crafted to unite every movement."
+  },
+  "locations": {
+    "title": "Find Our Stores"
+  },
+  "store": {
+    "regent": "Regent Street UK",
+    "stratford": "Stratford Westfield UK",
+    "bicester": "Bicester Village UK",
+    "dubai": "Dubai UAE"
+  },
+  "products": {
+    "title": "Products",
+    "noAvailable": "No available products."
+  },
+  "checkout": {
+    "title": "Checkout",
+    "empty": "No products selected.",
+    "total": "Total"
+  },
+
+  "login": {
+    "title": "Login",
+    "username": "Username",
+    "password": "Password",
+    "username_required": "Username is required",
+    "password_required": "Password is required",
+    "confirm_password": "Confirm Password",
+    "confirm_password_required": "Confirm Password is required",
+    "login_button": "Login",
+    "cancel_button": "Cancel",
+    "no_account": "Don't have an account?",
+    "sign_up_here": "Sign up here",
+    "have_account": "Already have an account?",
+    "login_here": "Login here",
+    "sign_up_title": "Sign Up"
+  },
+  "crud_operations": {
+    "edit_product": "Edit Product",
+    "add_product": "Add Product",
+    "product_name": "Product Name",
+    "description": "Description",
+    "color": "Color",
+    "price": "Price",
+    "required": "Required",
+    "price_required": "Price is required",
+    "price_min": "Price must be greater than 0",
+    "upload_image": "Click or drag to upload an image",
+    "cancel": "Cancel",
+    "save": "Save"
+  }
+}

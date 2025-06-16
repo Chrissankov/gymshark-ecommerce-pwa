@@ -1,0 +1,40 @@
+main {
+    flex-grow: 1;
+    padding: 0 80px;
+    background-color: #fff;
+  }
+  
+  .container-locations-products {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    width: 100% ;
+    padding: 2rem 0;
+    box-sizing: border-box;
+    margin-top: 1rem;
+  }
+  
+  .locations {
+    max-width: 70%;
+  }
+  
+  .products {
+    max-width: 30%;
+  }
+  
+  @media (max-width: 768px) {
+    .container-locations-products {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .locations{
+      min-width: 100%;
+    }
+
+    .products{
+      min-width: 100%;
+    }
+  }
+  
+  

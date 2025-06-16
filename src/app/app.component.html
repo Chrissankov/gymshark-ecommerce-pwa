@@ -1,0 +1,12 @@
+<div [attr.dir]="rtlDirection ? 'rtl' : 'ltr'">
+  <!-- Your header component emits an event called onChangeLang -->
+  <!-- This listens for it and calls changeLang(...), passing the selected language code ('en' or 'ar'). -->
+  <app-header (onChangeLang)="changeLang($event)"></app-header>
+
+  <main>
+    <!-- router-outlet is a placeholder for whichever component is currently routed ('/', '/ecommerce') -->
+    <router-outlet></router-outlet>
+  </main>
+
+  <app-footer></app-footer>
+</div>
