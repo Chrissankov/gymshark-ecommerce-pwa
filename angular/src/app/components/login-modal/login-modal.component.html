@@ -1,0 +1,95 @@
+<div class="modal-overlay">
+  <div class="modal" [formGroup]="isSignUpMode ? signUpForm : loginForm">
+    <h2>
+      {{
+        isSignUpMode
+          ? ("login.sign_up_title" | translate)
+          : ("login.title" | translate)
+      }}
+    </h2>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>{{ "login.username" | translate }}</mat-label>
+      <input matInput formControlName="username" />
+      <mat-error
+        *ngIf="
+          isSignUpMode
+            ? signUpForm.get('username')?.hasError('required')
+            : loginForm.get('username')?.hasError('required')
+        "
+      >
+        {{ "login.username_required" | translate }}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>{{ "login.password" | translate }}</mat-label>
+      <input matInput type="password" formControlName="password" />
+      <mat-error
+        *ngIf="
+          isSignUpMode
+            ? signUpForm.get('password')?.hasError('required')
+            : loginForm.get('password')?.hasError('required')
+        "
+      >
+        {{ "login.password_required" | translate }}
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Sign Up Specific Fields -->
+    <div *ngIf="isSignUpMode">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>{{ "login.confirm_password" | translate }}</mat-label>
+        <input matInput type="password" formControlName="confirmPassword" />
+        <mat-error
+          *ngIf="signUpForm.get('confirmPassword')?.hasError('required')"
+        >
+          {{ "login.confirm_password_required" | translate }}
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <!-- Error Message -->
+    <div *ngIf="!isSignUpMode && loginErrorMessage" class="error-message">
+      <mat-error>{{ loginErrorMessage }}</mat-error>
+    </div>
+
+    <div *ngIf="isSignUpMode && signUpErrorMessage" class="error-message">
+      <mat-error>{{ signUpErrorMessage }}</mat-error>
+    </div>
+
+    <div class="actions">
+      <button mat-button (click)="close()">
+        {{ "login.cancel_button" | translate }}
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="isSignUpMode ? signUp() : login()"
+        [disabled]="isSignUpMode ? signUpForm.invalid : loginForm.invalid"
+      >
+        {{
+          isSignUpMode
+            ? ("login.sign_up_here" | translate)
+            : ("login.login_button" | translate)
+        }}
+      </button>
+    </div>
+
+    <div class="toggle">
+      <div *ngIf="!isSignUpMode">
+        <p (click)="toggleSignUpMode()">
+          {{ "login.no_account" | translate }}
+          <span>{{ "login.sign_up_here" | translate }}</span>
+        </p>
+      </div>
+
+      <div *ngIf="isSignUpMode">
+        <p (click)="toggleSignUpMode()">
+          {{ "login.have_account" | translate }}
+          <span>{{ "login.login_here" | translate }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

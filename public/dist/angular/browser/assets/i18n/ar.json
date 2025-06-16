@@ -1,0 +1,78 @@
+{
+  "langs": {
+    "en": "إنجليزي",
+    "ar": "عربي"
+  },
+  "size": {
+    "increment": "أ +",
+    "decrement": "أ -"
+  },
+  "buttons": {
+    "login": "تسجيل الدخول",
+    "logout": "تسجيل الخروج"
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "products": "المنتجات",
+    "locations": "الفروع",
+    "follow": "تابعنا",
+    "ecommerce": "التجارة الإلكترونية"
+  },
+  "footer": {
+    "rights": "جميع الحقوق محفوظة."
+  },
+  "slider": {
+    "title": "الأكثر مبيعًا",
+    "description": "تم تصميم مجموعاتنا للفرق، والرياضيين، والعشاق، والأصدقاء. مزيج من الأناقة والأداء - مصمم لتوحيد كل حركة."
+  },
+  "locations": {
+    "title": "اعثر على متاجرنا"
+  },
+  "store": {
+    "regent": "شارع ريجنت - المملكة المتحدة",
+    "stratford": "وستفيلد ستراتفورد - المملكة المتحدة",
+    "bicester": "قرية بيستر - المملكة المتحدة",
+    "dubai": "دبي - الإمارات"
+  },
+  "products": {
+    "title": "المنتجات",
+    "noAvailable": "لا توجد منتجات متاحة."
+  },
+  "checkout": {
+    "title": "الدفع",
+    "empty": "لم يتم تحديد أي منتجات.",
+    "total": "المجموع"
+  },
+
+  "login": {
+    "title": "تسجيل الدخول",
+    "username": "اسم المستخدم",
+    "password": "كلمة المرور",
+    "username_required": "اسم المستخدم مطلوب",
+    "password_required": "كلمة المرور مطلوبة",
+    "confirm_password": "تأكيد كلمة المرور",
+    "confirm_password_required": "تأكيد كلمة المرور مطلوب",
+    "login_button": "تسجيل الدخول",
+    "cancel_button": "إلغاء",
+    "no_account": "ليس لديك حساب؟",
+    "sign_up_here": "سجل هنا",
+    "have_account": "هل لديك حساب؟",
+    "login_here": "تسجيل الدخول هنا",
+    "sign_up_title": "إنشاء حساب"
+  },
+
+  "crud_operations": {
+    "edit_product": "تعديل المنتج",
+    "add_product": "إضافة منتج",
+    "product_name": "اسم المنتج",
+    "description": "الوصف",
+    "color": "اللون",
+    "price": "السعر",
+    "required": "مطلوب",
+    "price_required": "السعر مطلوب",
+    "price_min": "يجب أن يكون السعر أكبر من 0",
+    "upload_image": "انقر أو اسحب لتحميل صورة",
+    "cancel": "إلغاء",
+    "save": "حفظ"
+  }
+}
